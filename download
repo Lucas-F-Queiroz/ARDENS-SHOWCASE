@@ -1,0 +1,33 @@
+# Roadmap
+
+## Completed
+
+- [x] Establish the core concept
+- [x] Build a functional MVP
+- [x] Validate the principal gameplay loop
+- [x] Reach a state suitable for broader refinement
+
+## Current phase — visual and structural rework
+
+- [ ] Define and document a consistent art direction
+- [ ] Standardize UI spacing and component behavior
+- [ ] Improve information hierarchy
+- [ ] Rework dragon presentation where required
+- [ ] Audit inconsistent or redundant visual assets
+- [ ] Review technical debt exposed by MVP development
+- [ ] Keep project documentation aligned with implementation
+
+## Portfolio / public showcase
+
+- [ ] Add current MVP screenshots
+- [ ] Add before/after screenshots from the visual rework
+- [ ] Record short gameplay GIFs
+- [ ] Publish a small architecture diagram
+- [ ] Add selected safe-to-share C# samples
+- [ ] Add one documented refactoring case study
+
+## Later
+
+- [ ] Prepare a distributable demo
+- [ ] Improve onboarding and first-session clarity
+- [ ] Expand content after the rework stabilizes
