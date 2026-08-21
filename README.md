@@ -60,7 +60,7 @@ Generated suggestions are not accepted blindly. Changes are reviewed against the
 
 The goal is to use AI to increase iteration speed while preserving ownership of architecture, product decisions and technical validation.
 
-More details: [`docs/AI-WORKFLOW.md`](docs/AI-WORKFLOW.md)
+
 
 ## Architecture
 
@@ -157,7 +157,7 @@ Current priorities:
 - [ ] Publish selected technical samples
 - [ ] Prepare a distributable demo/build
 
-See [`docs/ROADMAP.md`](docs/ROADMAP.md).
+
 
 ## Repository policy
 
