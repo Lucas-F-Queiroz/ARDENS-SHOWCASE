@@ -1,4 +1,4 @@
-# Architecture
+# ARDENS Architecture
 
 This document describes ARDENS at a portfolio-safe level. The production source code remains private.
 

@@ -4,6 +4,8 @@ ARDENS uses AI as part of the software-development process, with OpenAI Codex be
 
 The objective is not to delegate technical ownership. The objective is to reduce the cost of investigation, iteration and review while keeping decisions grounded in the actual project.
 
+The next planned engineering laboratory is **DragonLab**: a headless simulation environment that will use the game's rules to test balance with reproducible agents and telemetry. It is a development tool, not an AI dependency inside the player.
+
 ## Typical workflow
 
 ### 1. Inspect before changing
