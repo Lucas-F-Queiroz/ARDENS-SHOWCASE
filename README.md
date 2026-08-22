@@ -2,176 +2,100 @@
 
 > A pixel-art idle/AFK game about raising, progressing and managing dragons — built in Unity and developed as an evolving personal software project.
 
-![Status](https://img.shields.io/badge/status-MVP%20complete-success)
+![Status](https://img.shields.io/badge/status-MVP%20baseline-success)
 ![Current focus](https://img.shields.io/badge/current%20focus-visual%20rework-blueviolet)
 ![Engine](https://img.shields.io/badge/engine-Unity-black)
 ![Language](https://img.shields.io/badge/language-C%23-512BD4)
 ![AI assisted](https://img.shields.io/badge/development-AI%20assisted-6f42c1)
 
-## Overview
+<p align="center">
+  <img src="assets/gifs/ardens-walking-showcase.gif" alt="ARDENS dragon walking showcase" width="420">
+</p>
 
-ARDENS is a personal game project developed in Unity with C#. The project already has a functional MVP and is currently going through a broader visual rework focused on consistency, readability and a stronger art direction.
+## The project
 
-The project is also an ongoing exercise in software engineering: designing systems that can evolve, keeping scope under control, refactoring existing code, documenting decisions and using AI tools without giving up technical ownership.
+ARDENS is a personal Unity project built with C#. It combines a functional idle/AFK loop with dragons, progression, forging, inventory, breeding, trials and persistent state.
 
-The full source code is maintained privately. This public repository exists as a technical showcase of the project, its architecture, development process and selected implementation details.
+The MVP established the core loop. The current phase is a visual and UX rework focused on clearer hierarchy, consistent pixel-art presentation and a stronger identity across the interface.
 
-## Current status
+The full production source remains private. This repository is the public portfolio layer: real visual evidence, architecture notes, development decisions and selected safe-to-share material.
 
-- Functional MVP completed
-- Core gameplay loop implemented
-- Ongoing visual and UX rework
-- Existing systems being reviewed and refactored where needed
-- Art direction and interface consistency being standardized
-- Documentation being improved alongside development
+## What is already demonstrated
 
-## What I work on in this project
+- A working Unity desktop MVP.
+- Data-driven progression and economy-oriented systems.
+- Dragon collection, equipment, breeding and incubation flows.
+- Forge, inventory and trial-oriented gameplay screens.
+- Persistent game-state concerns and reusable UI patterns.
+- AI-assisted development with human review and local validation.
 
-ARDENS is not only a game prototype. It is the project where I practice maintaining a growing codebase and making technical decisions over time.
+## Visual showcase
 
-Areas explored include:
+These images come from the project and show the current direction of the playable interface.
 
-- Gameplay and progression systems
-- State and data management
-- Inventory and economy-related systems
-- UI flows and feedback
-- Save/persistence concerns
-- Code organization and refactoring
-- Scope control and iterative delivery
-- Documentation
-- Visual consistency across a 2D pixel-art interface
+<table>
+  <tr>
+    <td><img src="assets/screenshots/forge.png" alt="Forge screen" width="300"></td>
+    <td><img src="assets/screenshots/breeding.png" alt="Breeding screen" width="300"></td>
+    <td><img src="assets/screenshots/trials.png" alt="Trials screen" width="300"></td>
+  </tr>
+  <tr>
+    <td align="center">Forge</td>
+    <td align="center">Breeding</td>
+    <td align="center">Trials</td>
+  </tr>
+</table>
 
-## Development with AI
+The walking GIF is assembled from the dragon animation frames in [`assets/frames/walking/`](assets/frames/walking/). Directional sprite references are kept in [`assets/sprites/dragons/`](assets/sprites/dragons/).
 
-AI is part of the development workflow, especially OpenAI Codex.
+## Machine learning direction: DragonLab
 
-I use it as an engineering tool for:
+ARDENS will also include a machine-learning laboratory for balance testing.
 
-- Investigating existing code before changing it
-- Planning changes across multiple files
-- Implementing and iterating on features
-- Reviewing code and spotting duplication
-- Refactoring systems after the MVP stage
-- Maintaining documentation
-- Creating structured prompts for visual-asset workflows
-- Comparing implementation alternatives
+DragonLab is planned as a headless simulation environment that uses the same economy and progression rules as the game. Different agent profiles will test dominant strategies, idle periods, upgrade ROI and balance regressions across thousands of reproducible runs.
 
-Generated suggestions are not accepted blindly. Changes are reviewed against the project context, tested inside Unity and adjusted when necessary.
+The boundary is intentional:
 
-The goal is to use AI to increase iteration speed while preserving ownership of architecture, product decisions and technical validation.
+- ML is a development tool, not a player-facing dependency.
+- The simulation should reuse the game's real rules instead of a parallel fake economy.
+- Telemetry produces evidence and anomalies, not automatic balance changes.
+- Codex may explain results and propose changes, but design approval remains human.
 
+See the [DragonLab roadmap](docs/ROADMAP.md) for the planned implementation stages.
 
+## Engineering with AI
 
-## Architecture
+OpenAI Codex is used as an engineering tool for inspecting unfamiliar code, planning multi-file changes, refactoring, maintaining documentation and structuring visual-asset workflows.
 
-The public documentation intentionally stays at a high level because the production source remains private.
+Generated suggestions are reviewed against project context, tested in Unity and adjusted when necessary. The goal is faster iteration while preserving ownership of architecture, product decisions and validation.
 
-The project is organized around independent gameplay responsibilities instead of placing unrelated behavior into large scene scripts.
+Read the [AI-assisted development workflow](docs/AI-WORKFLOW.md) and the [architecture overview](docs/ARCHITECTURE.md).
+
+## Public repository structure
 
 ```text
-Gameplay
-├── Progression
-├── Economy
-├── Inventory
-├── Dragon systems
-└── Interaction rules
+assets/
+  screenshots/       Real UI captures used in the showcase
+  gifs/              Short presentation animations
+  frames/walking/    Source frames for the walking showcase
+  sprites/dragons/   Selected directional sprite references
 
-Presentation
-├── UI screens
-├── HUD / feedback
-├── Navigation
-└── Visual state
-
-Data
-├── Runtime state
-├── Configuration
-└── Persistence
-
-Infrastructure
-├── Save/load
-├── Shared services
-└── Development tooling
+docs/
+  ARCHITECTURE.md    Portfolio-safe architecture overview
+  AI-WORKFLOW.md     AI-assisted development process
+  ROADMAP.md         Visual, engineering and DragonLab direction
 ```
 
-The exact structure evolves as the project is refactored.
+## Public boundary
 
-More details: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+This repository intentionally does not contain:
 
-## Visual rework
+- full production source code;
+- proprietary or third-party licensed packages;
+- credentials or private service configuration;
+- unapproved production assets.
 
-The MVP proved the core systems, but it also made inconsistencies in the visual language more obvious.
-
-The current rework focuses on:
-
-- A consistent pixel-art direction
-- Better hierarchy and readability
-- Less visually forced UI composition
-- Reworking dragon presentation where necessary
-- Standardized spacing, scale and interface patterns
-- Making assets feel like parts of the same game rather than isolated pieces
-
-### Before / after
-
-Screenshots and GIFs will be added here as the rework progresses.
-
-| Before | After |
-| --- | --- |
-| `assets/screenshots/before.png` | `assets/screenshots/after.png` |
-
-## Selected technical notes
-
-Instead of publishing the complete Unity project, this repository can contain small, isolated examples that are safe to share.
-
-See [`code-samples/README.md`](code-samples/README.md).
-
-Planned examples:
-
-- A small state/progression component
-- A UI update flow
-- A persistence-related example
-- A refactoring example showing before/after reasoning
-
-These samples should be understandable on their own and must not depend on proprietary assets.
-
-## Engineering decisions
-
-Some principles used while evolving the project:
-
-1. **MVP first** — validate the loop before spending heavily on polish.
-2. **Refactor after evidence** — restructure code when real usage exposes friction, not only because a pattern looks cleaner.
-3. **Keep presentation separate from rules when practical** — UI should display game state rather than become the source of truth.
-4. **Prefer understandable systems over premature complexity**.
-5. **Use AI as leverage, not as an authority** — suggestions still require context, review and testing.
-
-## Roadmap
-
-Current priorities:
-
-- [x] Reach a functional MVP
-- [x] Validate the main gameplay loop
-- [ ] Complete visual-direction rework
-- [ ] Standardize UI components and spacing
-- [ ] Improve dragon presentation
-- [ ] Review technical debt accumulated during MVP development
-- [ ] Add public screenshots and GIFs
-- [ ] Publish selected technical samples
-- [ ] Prepare a distributable demo/build
-
-
-
-## Repository policy
-
-The full ARDENS source code and production assets are private.
-
-This repository is intended for:
-
-- Technical portfolio presentation
-- Development documentation
-- Architecture notes
-- Screenshots and demos
-- Selected non-sensitive code samples
-
-No production source or third-party licensed assets should be copied here unless they are explicitly safe to redistribute.
+The public material exists to demonstrate engineering judgment, iteration, documentation and visual direction.
 
 ## About the developer
 
